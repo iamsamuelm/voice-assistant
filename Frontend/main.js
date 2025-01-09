@@ -1,6 +1,6 @@
 $(document).ready(function () {
     // Welcome text aninmation
-    $('.text').textillate({
+    $('.welcome-text').textillate({
         loop: true,
         sync: true,
         in:{
@@ -8,6 +8,20 @@ $(document).ready(function () {
         },
         out:{
             effect: "bounceOut",
+        },
+    });
+
+    // ReadOut text aninmation
+    $('.readOut-caption').textillate({
+        loop: true,
+        sync: true,
+        in:{
+            effect: "bounceIn",
+            sequence: true,
+        },
+        out:{
+            effect: "bounceOut",
+            sequence: true,
         },
     });
 
