@@ -1,11 +1,10 @@
-import os
-from playsound import playsound
+from pydub import AudioSegment
+from pydub.playback import play
+import eel
 
-# Friday start sound
+#Friday start sound
+@eel.expose
 def playStartSound():
-    # Dynamically resolve the absolute path to the sound file
-    sound_path = os.path.join(
-        os.path.dirname(os.path.abspath(__file__)),  # Directory of features.py
-        "../Frontend/assets/audio/soft-startup-sound.mp3"
-    )
-    playsound(sound_path)
+    sound_path = "Frontend/assets/audio/soft-startup-sound.mp3"
+    sound = AudioSegment.from_file(sound_path, format="mp3")
+    play(sound)
