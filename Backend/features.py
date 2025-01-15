@@ -1,10 +1,10 @@
+import eel
 from pydub import AudioSegment
 from pydub.playback import play
-import eel
 
-#Friday start sound
+# Friday's Startup Sound
 @eel.expose
-def playStartSound():
-    sound_path = "Frontend/assets/audio/soft-startup-sound.mp3"
-    sound = AudioSegment.from_file(sound_path, format="mp3")
+def playDigitalClick():
+    music_dir = "/Users/semasmuma/Desktop/Portfolio/Voice Assistant/voice-assistant/Frontend/assets/audio/ui-digital-click.wav"
+    sound = AudioSegment.from_wav(music_dir)
     play(sound)

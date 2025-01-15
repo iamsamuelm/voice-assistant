@@ -43,6 +43,7 @@ $(document).ready(function () {
     
         // Toggle hidden attributes after transition
         setTimeout(function () {
+            // eel.playDigitalClick()
             $("#oval").attr("hidden", true);
             $("#SiriWave").attr("hidden", false);
     
